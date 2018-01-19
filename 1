@@ -1,0 +1,6 @@
+export WINDOWS_LIBS=~/mingw32
+export PATH=$WINDOWS_LIBS/SDL-1.2.13/bin:$PATH
+make CXX=i586-mingw32msvc-g++ depend
+make CXX=i586-mingw32msvc-g++ OPTIFLAG="-Drandom=rand -Dsrandom=srand -DWIN" triplane
+mv triplane triplane.exe
+make fokker.dks

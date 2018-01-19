@@ -1,0 +1,8 @@
+export WINDOWS_LIBS=~/mingw32
+mkdir $WINDOWS_LIBS || exit 1
+pushd $WINDOWS_LIBS
+wget http://www.libsdl.org/release/SDL-devel-1.2.13-mingw32.tar.gz
+tar zxf SDL-devel-1.2.13-mingw32.tar.gz
+sed -i "s@^prefix=.*@prefix=$WINDOWS_LIBS/SDL-1.2.13@" SDL-1.2.13/bin/sdl-config
+sed -i "s@^libdir=.*@libdir=$WINDOWS_LIBS/SDL-1.2.13/lib@" SDL-1.2.13/lib/libSDL.la
+popd 

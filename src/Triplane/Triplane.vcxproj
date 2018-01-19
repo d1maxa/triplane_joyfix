@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B9F5BA02-53DF-4783-9177-C64073372F68}</ProjectGuid>
+    <RootNamespace>Triplane</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>I:\Games\Triplane\Build_2\triplane\src\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);HAVE_SDL_MIXER;TRIPLANE_VERSION="1.0.8";TRIPLANE_DATA="/usr/local/share/games/triplane"</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>I:\Games\Triplane\Build_2\triplane\src\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\gfx\bitmap.cpp" />
+    <ClCompile Include="..\gfx\extra.cpp" />
+    <ClCompile Include="..\gfx\fades.cpp" />
+    <ClCompile Include="..\gfx\font.cpp" />
+    <ClCompile Include="..\gfx\gfx.cpp" />
+    <ClCompile Include="..\io\dksfile.cpp" />
+    <ClCompile Include="..\io\joystick.cpp" />
+    <ClCompile Include="..\io\mouse.cpp" />
+    <ClCompile Include="..\io\sdl_compat.cpp" />
+    <ClCompile Include="..\io\sound.cpp" />
+    <ClCompile Include="..\io\timing.cpp" />
+    <ClCompile Include="..\io\video.cpp" />
+    <ClCompile Include="..\menus\tripmenu.cpp" />
+    <ClCompile Include="..\settings.cpp" />
+    <ClCompile Include="..\triplane.cpp" />
+    <ClCompile Include="..\util\random.cpp" />
+    <ClCompile Include="..\util\wutil.cpp" />
+    <ClCompile Include="..\world\fobjects.cpp" />
+    <ClCompile Include="..\world\plane.cpp" />
+    <ClCompile Include="..\world\terrain.cpp" />
+    <ClCompile Include="..\world\tmexept.cpp" />
+    <ClCompile Include="..\world\tripai.cpp" />
+    <ClCompile Include="..\world\tripaudio.cpp" />
+    <ClCompile Include="..\world\tripmis.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\gfx\bitmap.h" />
+    <ClInclude Include="..\gfx\extra.h" />
+    <ClInclude Include="..\gfx\fades.h" />
+    <ClInclude Include="..\gfx\font.h" />
+    <ClInclude Include="..\gfx\gfx.h" />
+    <ClInclude Include="..\io\dksfile.h" />
+    <ClInclude Include="..\io\joystick.h" />
+    <ClInclude Include="..\io\mouse.h" />
+    <ClInclude Include="..\io\sdl_compat.h" />
+    <ClInclude Include="..\io\sound.h" />
+    <ClInclude Include="..\io\timing.h" />
+    <ClInclude Include="..\io\trip_io.h" />
+    <ClInclude Include="..\io\video.h" />
+    <ClInclude Include="..\menus\tripmenu.h" />
+    <ClInclude Include="..\settings.h" />
+    <ClInclude Include="..\triplane.h" />
+    <ClInclude Include="..\util\random.h" />
+    <ClInclude Include="..\util\wutil.h" />
+    <ClInclude Include="..\world\constants.h" />
+    <ClInclude Include="..\world\fobjects.h" />
+    <ClInclude Include="..\world\plane.h" />
+    <ClInclude Include="..\world\terrain.h" />
+    <ClInclude Include="..\world\tmexept.h" />
+    <ClInclude Include="..\world\tripai.h" />
+    <ClInclude Include="..\world\tripaudio.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
